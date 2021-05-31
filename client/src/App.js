@@ -29,6 +29,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     width: "100%",
   },
+  anchor: {
+    textDecoration: "none",
+    color: "#000000",
+  },
 }));
 
 const App = () => {
@@ -37,7 +41,16 @@ const App = () => {
     <div className={classes.wrapper}>
       <AppBar className={classes.appBar} position='static' color='inherit'>
         <Typography variant='h2' align='center'>
-          Video Chat
+          Let's Connect
+          <Typography variant='h6' align='right'>
+            by{" "}
+            <a
+              className={classes.anchor}
+              href='https://manishvig.live'
+              target='_blank'>
+              Manish Vig
+            </a>
+          </Typography>
         </Typography>
       </AppBar>
       <VideoPlayer />
